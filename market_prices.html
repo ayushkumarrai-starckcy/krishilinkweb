@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishilink - Market Prices</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/market_prices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Krishilink
+        </div>
+        <div class="user-info">
+            <span>User info</span>
+            <span style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">San Singh</span>
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <nav class="container">
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+
+        <a href="market_prices.html" class="active"><i class="fas fa-chart-line"></i> Market Prices</a>
+        <a href="bookings.html"><i class="fas fa-calendar-alt"></i> Bookings</a>
+        <a href="my_bookings.html"><i class="fas fa-list"></i> My Bookings</a>
+        <a href="profile.html"><i class="fas fa-user-check"></i> Profile</a>
+    </nav>
+
+    <main class="container market-grid">
+
+        <!-- Real-time Market Prices -->
+        <section class="prices-card card">
+            <h2>Real-time Market Prices</h2>
+
+            <div class="filter-row">
+                <select class="search-input">
+                    <option value="" disabled selected>Select Commodity</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="onion">Onion</option>
+                    <option value="tomato">Tomato</option>
+                </select>
+                <select class="search-input">
+                    <option value="" disabled selected>Select Mandi</option>
+                    <option value="azadpur">Azadpur Mandi</option>
+                    <option value="ghazipur">Ghazipur Mandi</option>
+                    <option value="okhla">Okhla Mandi</option>
+                </select>
+                <button class="filter-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+
+            <table class="prices-table">
+                <thead>
+                    <tr>
+                        <th>Mandi Name</th>
+                        <th>Commodity</th>
+                        <th>Price (Per Quintal)</th>
+                    </tr>
+                    <tr>
+                        <th class="sub-header">Measure</th>
+                        <th class="sub-header">Date</th>
+                        <th class="sub-header">Trend (Since Yesterday)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 chilli</td>
+                        <td>02/Dec/2025</td>
+                        <td>₹2150 <span class="text-green">↑ ₹20</span></td>
+                    </tr>
+                    <tr>
+                        <td>2 Onion</td>
+                        <td>02/Dec/2025</td>
+                        <td>₹2150 <span class="text-green">↑ ₹20</span></td>
+                    </tr>
+                    <tr>
+                        <td>3 Rice</td>
+                        <td>02/Dec/2025</td>
+                        <td>₹2200 <span class="text-red">↓ ₹10</span></td>
+                    </tr>
+                    <tr>
+                        <td>4 Wheat</td>
+                        <td>02/Dec/2025</td>
+                        <td>₹2500 <span class="text-red">↓ ₹50</span></td>
+                    </tr>
+                    <tr>
+                        <td>5 Tomato</td>
+                        <td>02/Dec/2025</td>
+                        <td>₹3500 <span class="text-green">↑ ₹50</span></td>
+                    </tr>
+                    <tr>
+                        <td>7 Potato</td>
+                        <td>02/Dec/2025</td>
+                        <td>₹800 <span class="text-green">↑ ₹0</span></td>
+                    </tr>
+                    <tr>
+                        <td>6 Brinjal</td>
+                        <td>02/Dec/2025</td>
+                        <td>₹800 <span class="text-red">= ₹0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Price Trend Chart -->
+        <section class="chart-card card">
+            <h3>Price Trend (Last 7 Days)</h3>
+            <div class="chart-container">
+                <!-- Simple CSS Chart Representation -->
+                <div class="y-axis">
+                    <span>190</span>
+                    <span>70</span>
+                    <span>60</span>
+                    <span>20</span>
+                    <span>5</span>
+                    <span>0</span>
+                </div>
+                <div class="chart-area">
+                    <svg viewBox="0 0 200 100" class="trend-line">
+                        <polyline fill="none" stroke="#4CAF50" stroke-width="2"
+                            points="0,80 40,60 80,70 120,30 160,40 200,20" />
+                    </svg>
+                </div>
+            </div>
+            <div class="x-axis">
+                <span>Nov 26</span>
+                <span>100</span>
+                <span>2000</span>
+                <span>300</span>
+                <span>2000</span>
+            </div>
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666;">Selected: Wheat at ABC
+                Mandi</p>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

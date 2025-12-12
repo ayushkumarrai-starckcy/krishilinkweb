@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishilink - Dashboard</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <!-- Using Font Awesome for icons as a placeholder for the icons in the image -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Krishilink
+        </div>
+        <div class="user-info">
+            <span>User info</span>
+            <span style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">San Singh</span>
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <nav class="container">
+        <a href="index.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+
+        <a href="market_prices.html"><i class="fas fa-chart-line"></i> Market Prices</a>
+        <a href="bookings.html"><i class="fas fa-calendar-alt"></i> Bookings</a>
+        <a href="my_bookings.html"><i class="fas fa-list"></i> My Bookings</a>
+        <a href="profile.html"><i class="fas fa-user-check"></i> Profile</a>
+    </nav>
+
+    <main class="container dashboard-grid">
+
+        <!-- Welcome Section -->
+        <section class="welcome-card card">
+            <div class="welcome-header">
+                <div>
+                    <h2>Namaste, <span class="text-green">San Singh!</span></h2>
+                    <p>Today's Tuesday, 11 2025, your agricultural world at a glance.</p>
+                </div>
+                <button class="btn btn-primary">Print/Download All</button>
+            </div>
+            <button class="btn btn-primary" style="margin-top: 15px;"><i class="fas fa-lock"></i> Farm
+                Analytics</button>
+        </section>
+
+        <!-- Market Pulse -->
+        <section class="market-pulse card">
+            <div class="card-header">
+                <h3>Today's Market Pulse</h3>
+                <i class="fas fa-print"></i>
+            </div>
+            <div class="market-item">
+                <span>Wheat (Best Price)</span>
+                <span>at ABC / Mandi</span>
+            </div>
+            <div class="market-item highlight">
+                <span>₹2200 / Quintal</span>
+                <span class="text-green">↑ + 4</span>
+            </div>
+            <div class="market-item">
+                <span>at XBC Mandi</span>
+                <span class="text-red">↓ = 0</span>
+            </div>
+        </section>
+
+        <!-- Upcoming Bookings -->
+        <section class="upcoming-bookings card">
+            <div class="card-header">
+                <h3>Upcoming Bookings</h3>
+                <i class="fas fa-print"></i>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Date & Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Commodity</td>
+                        <td>Mandi</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>M12346</td>
+                        <td>05/Dec, 10 AM</td>
+                        <td class="text-green">Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>07/Dec, 10 AM</td>
+                        <td class="text-green">Cancel/View</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Past Bookings -->
+        <section class="past-bookings card">
+            <h3>Past Bookings</h3>
+            <div class="booking-row">
+                <div>
+                    <strong>#BK-7821</strong>
+                    <div style="font-size: 0.85rem; color: #666;">Rice</div>
+                </div>
+                <div>30/Nov, 10 AM</div>
+                <div class="text-green">Completed</div>
+            </div>
+            <div class="booking-row">
+                <div>
+                    <strong>#BK-7820</strong>
+                    <div style="font-size: 0.85rem; color: #666;">Tomato</div>
+                </div>
+                <div>28/Nov, 9 PM</div>
+                <div class="text-green">Completed</div>
+            </div>
+            <div class="booking-row">
+                <div>
+                    <strong>#BK-7819</strong>
+                    <div style="font-size: 0.85rem; color: #666;">Potato</div>
+                </div>
+                <div>25/Nov, 2 PM</div>
+                <div class="text-red">Cancelled</div>
+            </div>
+        </section>
+
+        <!-- Wheat Bookings -->
+        <section class="wheat-bookings card">
+            <h3>Wheat Upcoming Bookings</h3>
+            <div class="booking-row">
+                <div><i class="fas fa-calendar"></i> Rice</div>
+                <div>XYR Mandi</div>
+            </div>
+            <div class="booking-row">
+                <div><i class="fas fa-calendar"></i> M09875</div>
+                <div>25/Nov, 9 PM</div>
+                <button class="btn btn-secondary">Cancel/View</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

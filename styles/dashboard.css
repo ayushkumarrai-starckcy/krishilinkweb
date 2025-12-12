@@ -1,0 +1,105 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+}
+
+.welcome-card {
+    grid-column: 1 / 2;
+}
+
+.welcome-card .hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.market-pulse {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.upcoming-bookings {
+    grid-column: 1 / 2;
+}
+
+.past-bookings {
+    grid-column: 2 / 3;
+}
+
+.section-card {
+    grid-column: 1 / 2;
+}
+
+.wheat-bookings {
+    grid-column: 1 / 2;
+}
+
+/* Specific Card Styles */
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.market-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.market-item:hover {
+    background-color: #f9f9f9;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 4px;
+}
+
+.market-item:last-child {
+    border-bottom: none;
+}
+
+.market-item.highlight {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.booking-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.booking-row:hover {
+    background-color: #f9f9f9;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .market-pulse,
+    .past-bookings {
+        grid-column: 1 / -1;
+    }
+}

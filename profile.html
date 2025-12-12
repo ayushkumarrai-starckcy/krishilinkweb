@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishilink - Profile</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Krishilink
+        </div>
+        <div class="user-info">
+            <span>User info</span>
+            <span style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">San Singh</span>
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <nav class="container">
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+
+        <a href="market_prices.html"><i class="fas fa-chart-line"></i> Market Prices</a>
+        <a href="bookings.html"><i class="fas fa-calendar-alt"></i> Bookings</a>
+        <a href="my_bookings.html"><i class="fas fa-list"></i> My Bookings</a>
+        <a href="profile.html" class="active"><i class="fas fa-user-check"></i> Profile</a>
+    </nav>
+
+    <main class="container profile-grid">
+
+        <!-- Personal Information -->
+        <section class="personal-info card">
+            <h2>Personal Information</h2>
+
+            <div class="info-row">
+                <label>Name:</label>
+                <input type="text" value="San Singh" readonly class="form-control">
+            </div>
+            <div class="info-row">
+                <label>Mobile Number</label>
+                <input type="text" value="number" readonly class="form-control">
+            </div>
+            <div class="info-row">
+                <label>Password:</label>
+                <input type="password" value="********" readonly class="form-control">
+            </div>
+            <div class="info-row">
+                <label>District:</label>
+                <input type="text" value="......." readonly class="form-control">
+            </div>
+            <div class="info-row">
+                <label>Village:</label>
+                <input type="text" value="....." readonly class="form-control">
+            </div>
+            <div class="info-row double-input">
+                <label>City:</label>
+                <input type="text" value="city" readonly class="form-control">
+            </div>
+            <div class="info-row double-input">
+                <label>State:</label>
+                <input type="text" value="state" readonly class="form-control">
+            </div>
+
+            <h3 style="margin-top: 20px;">Farm/Location Details</h3>
+            <div class="crops-grid">
+                <div>
+                    <h4>Primary Crops</h4>
+                    <label class="checkbox-container"><input type="checkbox"> Wheat</label>
+                    <label class="checkbox-container"><input type="checkbox" checked> Rice</label>
+                    <label class="checkbox-container"><input type="checkbox" checked> Rice</label>
+                    <label class="checkbox-container"><input type="checkbox"> Potato</label>
+                    <label class="checkbox-container"><input type="checkbox"> Potato</label>
+                    <label class="checkbox-container"> Onion</label>
+                </div>
+                <div>
+                    <h4>Crops</h4>
+                    <label class="checkbox-container"><input type="checkbox" checked> Wheat</label>
+                    <label class="checkbox-container"><input type="checkbox"> Tomato</label>
+                    <label class="checkbox-container"><input type="checkbox"> Tomato</label>
+                    <label class="checkbox-container"><input type="checkbox"> Onion</label>
+                    <label class="checkbox-container"><input type="checkbox"> Onion</label>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button class="btn btn-primary"><i class="fas fa-sync"></i> Update Profile</button>
+                <button class="btn btn-secondary"><i class="fas fa-key"></i> Change Password →</button>
+            </div>
+        </section>
+
+        <!-- Right Column -->
+        <div class="right-column">
+
+            <!-- Market Pulse (Reused) -->
+            <section class="market-pulse-small card">
+                <h3>Today's Market Pulse</h3>
+                <div class="market-item">
+                    <span>Wheat (Best Price)</span>
+                    <span>at ABC / Miantal</span>
+                </div>
+                <div class="market-item">
+                    <span>₹2200 250 / Quinta</span>
+                    <span class="text-green">↑ + -2</span>
+                </div>
+                <div class="market-item">
+                    <span>at XBC Mandi</span>
+                    <span class="text-green">↑ ↓ = 0</span>
+                </div>
+            </section>
+
+            <!-- Login/Registration -->
+            <section class="login-card card">
+                <h3>Login/Registration</h3>
+
+                <div class="auth-container">
+                    <input type="radio" name="auth-tab" id="tab-login" checked>
+                    <input type="radio" name="auth-tab" id="tab-register">
+
+                    <div class="auth-tabs">
+                        <label for="tab-login" class="tab-btn">Login</label>
+                        <label for="tab-register" class="tab-btn">Register</label>
+                    </div>
+
+                    <div class="auth-content">
+                        <!-- Login Form -->
+                        <div class="form-view login-view">
+                            <div class="form-group">
+                                <label>Mobile Number</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="text" placeholder="Enter Mobile Number" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" placeholder="Enter Password" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="login-actions">
+                                <button class="btn btn-primary full-width">Login</button>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <a href="#" style="font-size: 0.9rem; color: var(--dark-green);">Forgot Password?</a>
+                            </div>
+                        </div>
+
+                        <!-- Register Form -->
+                        <div class="form-view register-view">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" placeholder="Enter Full Name" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mobile Number</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="text" placeholder="Enter Mobile Number" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" placeholder="Create Password" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" placeholder="Confirm Password" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="login-actions">
+                                <button class="btn btn-primary full-width">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

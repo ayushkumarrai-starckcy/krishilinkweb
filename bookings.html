@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishilink - Bookings</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/bookings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Krishilink
+        </div>
+        <div class="user-info">
+            <span>User info</span>
+            <span style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">San Singh</span>
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <nav class="container">
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+
+        <a href="market_prices.html"><i class="fas fa-chart-line"></i> Market Prices</a>
+        <a href="bookings.html" class="active"><i class="fas fa-calendar-alt"></i> Bookings</a>
+        <a href="my_bookings.html"><i class="fas fa-list"></i> My Bookings</a>
+        <a href="profile.html"><i class="fas fa-user-check"></i> Profile</a>
+    </nav>
+
+    <main class="container bookings-grid">
+
+        <!-- Booking Confirmation Alert -->
+        <div class="booking-alert card">
+            <h3>Booking Confirmed! Your Booking ID: M12345</h3>
+            <button class="btn btn-light">Print Confirmation</button>
+        </div>
+
+        <!-- Booking Form -->
+        <section class="booking-form card">
+            <h2>Booking Form</h2>
+
+            <div class="form-group">
+                <label>Select Mandi:</label>
+                <div class="mandi-selection">
+                    <select class="form-control">
+                        <option>Choose Mandi...</option>
+                        <option>ABC Mandi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Select Commodity</label>
+                <div class="commodity-grid">
+                    <input type="radio" name="commodity" id="comm-rice" class="hidden-radio" checked>
+                    <label for="comm-rice" class="commodity-item"><i class="fas fa-seedling"></i> Rice</label>
+
+                    <input type="radio" name="commodity" id="comm-wheat" class="hidden-radio">
+                    <label for="comm-wheat" class="commodity-item"><i class="fas fa-wheat"></i> Wheat</label>
+
+                    <input type="radio" name="commodity" id="comm-tomato" class="hidden-radio">
+                    <label for="comm-tomato" class="commodity-item"><i class="fas fa-carrot"></i> Tomato</label>
+
+                    <input type="radio" name="commodity" id="comm-potato" class="hidden-radio">
+                    <label for="comm-potato" class="commodity-item"><i class="fas fa-lemon"></i> Potato</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Select Date</label>
+                <div class="date-picker">
+                    <input type="text" placeholder="Pick a date" class="form-control" style="margin-bottom: 10px;">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <i class="fas fa-chevron-left"></i>
+                            <span class="month-year">December 2025</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="calendar-weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="calendar-days">
+                                <div class="prev-date">30</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div class="active">10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div>19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div>31</div>
+                                <div class="next-date">1</div>
+                                <div class="next-date">2</div>
+                                <div class="next-date">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Time Time Slots</label>
+                <div class="slots-grid">
+                    <input type="radio" name="slot" id="slot-1" class="hidden-radio">
+                    <label for="slot-1" class="slot-item available">09:00 AM - 10 PM <span class="badge">5/10 slots
+                            left</span></label>
+
+                    <input type="radio" name="slot" id="slot-2" class="hidden-radio" checked>
+                    <label for="slot-2" class="slot-item available">09:00 AM - 11-01 PM <span class="badge">5/10 slots
+                            left</span></label>
+
+                    <div class="slot-item full">Full<span class="badge">Fully Booket PM</span></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Approximate Quantity (Quintals)</label>
+                <input type="text" placeholder="Enter quantity" class="form-control">
+            </div>
+
+            <button class="btn btn-primary full-width">Confirm Booking</button>
+        </section>
+
+        <!-- Booking Summary Sidebar -->
+        <aside class="booking-summary card">
+            <h3>Slot Book</h3>
+            <h4>Your Booking Summary</h4>
+
+            <div class="summary-item">
+                <i class="fas fa-calendar"></i>
+                <div class="summary-details">
+                    <span>Rice</span>
+                    <span class="sub-text">at ABC / Mandi</span>
+                </div>
+            </div>
+
+            <div class="summary-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="summary-details">
+                    <span>ABC Mandi</span>
+                    <span class="text-green">up 1</span>
+                </div>
+            </div>
+
+            <div class="summary-item">
+                <i class="fas fa-clock"></i>
+                <div class="summary-details">
+                    <span>On 05/Dec/2025</span>
+                    <span class="text-red">= 0</span>
+                </div>
+            </div>
+
+            <div class="summary-item">
+                <i class="fas fa-user"></i>
+                <div class="summary-details">
+                    <span>San Singh</span>
+                    <span class="text-red">0</span>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary full-width" style="margin-top: 20px;">Edit</button>
+        </aside>
+
+    </main>
+
+</body>
+
+</html>

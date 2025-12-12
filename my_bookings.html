@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishilink - My Bookings</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/my_bookings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Krishilink
+        </div>
+        <div class="user-info">
+            <span>User info</span>
+            <span style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">San Singh</span>
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <nav class="container">
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+
+        <a href="market_prices.html"><i class="fas fa-chart-line"></i> Market Prices</a>
+        <a href="bookings.html"><i class="fas fa-calendar-alt"></i> Bookings</a>
+        <a href="my_bookings.html" class="active"><i class="fas fa-list"></i> My Bookings</a>
+        <a href="profile.html"><i class="fas fa-user-check"></i> Profile</a>
+    </nav>
+
+    <main class="container my-bookings-grid">
+
+        <!-- Welcome / Intro -->
+        <section class="intro-card card">
+            <div class="intro-header">
+                <div>
+                    <h2>Namaste, <span class="text-green">San Singh!</span></h2>
+                    <p>Today's Tuesday, December 2025, Your agricultural world at a glance.</p>
+                </div>
+            </div>
+            <div class="intro-actions">
+                <button class="btn btn-primary"><i class="fas fa-lock"></i> Farm Analytics</button>
+                <button class="btn btn-secondary"><i class="fas fa-cloud"></i> Commodities Interest</button>
+            </div>
+        </section>
+
+        <!-- Market Pulse Small -->
+        <section class="market-pulse-small card">
+            <h3>Today's Market Pulse</h3>
+            <div class="market-item">
+                <span>Wheat (Best Price)</span>
+                <span>at ABC / Mandi</span>
+            </div>
+            <div class="market-item">
+                <span>₹2200 / Quintal</span>
+                <span class="text-green">↑ + 20</span>
+            </div>
+            <div class="market-item">
+                <span>at XBC Mandi</span>
+                <span class="text-red">↓ = 0</span>
+            </div>
+        </section>
+
+        <!-- Action Cards -->
+        <section class="action-cards">
+            <div class="action-card card green-card">
+                <i class="fas fa-info-circle"></i>
+                <h4>Price Check</h4>
+                <p>Access live market prices for crops, anywhere.</p>
+            </div>
+            <div class="action-card card green-card">
+                <i class="fas fa-calendar-check"></i>
+                <h4>Seed Booking</h4>
+                <p>Access live market for your staples.</p>
+            </div>
+            <div class="action-card card green-card">
+                <i class="fas fa-chart-bar"></i>
+                <h4>Slot-book</h4>
+                <p>Access live maintenance for your time schedule.</p>
+            </div>
+            <div class="action-card card green-card">
+                <i class="fas fa-history"></i>
+                <h4>Slot-Book</h4>
+                <p>Access live mandis for your farm future.</p>
+            </div>
+        </section>
+
+        <!-- Another Market Pulse / Section Card -->
+        <section class="section-card-pulse card">
+            <h3>Today's Market Pulse</h3>
+            <div class="market-item">
+                <span>Wheat (Best Price)</span>
+                <span>at ABC / Mandi</span>
+            </div>
+            <div class="market-item">
+                <span>₹2200 350 / Quintal</span>
+                <span class="text-red">↓ - 5</span>
+            </div>
+            <div class="market-item">
+                <span>₹30 Potato (Local)</span>
+                <span class="text-red">= ↓ = 0</span>
+            </div>
+            <div class="market-item">
+                <span>at City Mandi</span>
+                <span class="text-red">= ↓ stable</span>
+            </div>
+        </section>
+
+        <!-- Your Hatoming Bookings -->
+        <section class="hatoming-bookings card">
+            <h3>Your Upcoming Bookings</h3>
+            <div class="booking-item">
+                <i class="fas fa-calendar"></i> Rice (Paddy) on 05/Dec/205
+            </div>
+            <div class="booking-item">
+                <i class="fas fa-clock"></i> Time Slot: 10:00 AM - 1200 PM
+            </div>
+            <button class="btn btn-secondary" style="margin-top: 10px;">View All Bookings →</button>
+        </section>
+
+        <!-- Upcoming Bookings List -->
+        <section class="upcoming-list card">
+            <h3>Upcoming Bookings</h3>
+            <div class="booking-item">
+                <i class="fas fa-calendar"></i> Rice (Paddy)
+            </div>
+            <div class="booking-item">
+                <i class="fas fa-calendar"></i> Wheat (Paddy) on 05/Dect Mandi <i class="fas fa-map-marker-alt"></i> ABC
+                Mandi.
+            </div>
+            <a href="#" class="text-green" style="display: block; margin-top: 10px;">View All Bookings</a>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

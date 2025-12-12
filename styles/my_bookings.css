@@ -1,0 +1,106 @@
+.my-bookings-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.intro-card {
+    grid-column: 1 / 2;
+}
+
+.market-pulse-small {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.action-cards {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.section-card-pulse {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    /* Span vertically */
+}
+
+.hatoming-bookings {
+    grid-column: 1 / 2;
+}
+
+.upcoming-list {
+    grid-column: 2 / 3;
+}
+
+/* Specific Styles */
+.intro-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.green-card {
+    background-color: var(--dark-green);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.green-card h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.green-card p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.green-card i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.booking-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.booking-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .my-bookings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .market-pulse-small,
+    .section-card-pulse,
+    .upcoming-list {
+        grid-column: 1 / -1;
+    }
+
+    .action-cards {
+        grid-template-columns: 1fr;
+        /* Stack cards on mobile */
+    }
+
+    .intro-actions {
+        flex-direction: column;
+        /* Stack buttons on mobile */
+    }
+
+    .intro-actions .btn {
+        width: 100%;
+        /* Full width buttons */
+    }
+}
